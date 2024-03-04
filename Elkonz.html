@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-Konz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon"  type="image/png" href="tinywow_change_bg_photo_47729528.png">
+    <link rel="stylesheet" href="all.min.css">
+    <script src="all.min.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="header">
+        <div class="container">
+            <h1 class="logo">Elkonz</h1>
+            <ul id="header_content">
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+            <p id="toggle"><i id="bars" class="fa-solid fa-bars"></i></p>
+        </div>
+    </nav>
+    <!-- start landing -->
+    <div class="landing">
+       <div class="blur-section"> 
+           <div class="path-logo">
+
+           </div>
+            <div class="profile">
+                <video src="videos/hady1_animation.mp4 "  autoplay loop ></video>
+            </div>
+       </div>
+    </div>
+    <!-- end landing -->
+    <!-- sart Services -->
+    <div id="services" class="services">
+            <div class="sectionHeading">
+                <h2>services</h2>
+            </div>
+            <div class="container">
+            <div class="card ">
+                <div class="img">
+                    <img src="images/nebula_stars_lights_night_4k_hd_creative.jpg" alt="" >
+                </div>
+                <h3> project 1</h3>
+                <div>
+                    <button> See More </button>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="img">
+                    <img src="images/buildings_skyscrapers_bottom_view_black_and_white_sky_reflection_glass_wallpaper_background_4k_hd_dark_background.jpg" alt="">
+                </div>
+                <h3> project 2</h3>
+                <div>
+                    <button> See More </button>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="img">
+                    <img src="images/landing-image.png" alt="">
+                </div>
+                <h3> project 3</h3>
+                <div>
+                    <button> See More </button>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="img">
+                    <img src="images/mini.jpg" alt="">
+                </div>
+                <h3> project 4</h3>
+                <div>
+                    <button> See More </button>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="img">
+                    <img src="images/sea_mountains_snow_clouds_sky_evening_time_4k_hd_dark_background.jpg" alt="">
+                </div>
+                <h3> project 5</h3>
+                <div>
+                    <button> See More </button>
+                </div>
+            </div>
+            <div class="card ">
+                <div class="img">
+                    <img src="images/bg.jpg" alt="">
+                </div>
+                <h3> project 4</h3>
+                <div>
+                    <button> See More </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Services -->
+
+   <script>
+    /*toggle Event*/
+    toggle.onclick=function(){
+
+        header_content.classList.toggle("block");
+        toggle.innerHTML=`<i id="bars" class=" fa-solid fa-xmark"></i>`;
+
+            if( !header_content.classList.contains("block") ){
+                toggle.innerHTML=`<i id="bars" class="fa-solid fa-bars"></i>`;
+            }
+
+    }
+    /*toggle Event*/
+
+
+    // document.querySelectorAll("img").setAttribute("loading" ,"lazy");
+
+    
+    
+   </script>
+</body>
+</html>
