@@ -61,8 +61,7 @@ html{
     top: 0 ;
     width: 100% ;
     height: 72px;
-    background-color: #0000003d;
-    backdrop-filter: blur(500px) ;
+    background-color: #0d2e28;
     z-index: 1500;
     box-shadow: 0 0  2px 1px rgba(255, 253, 253, 0.459) ;
     border-bottom: 1px solid #fff;
@@ -95,7 +94,6 @@ html{
     flex-wrap: wrap;
     justify-content: end ;
     align-items: center;
-    margin-right: 2%;
 }
 .header .container ul li{
     display: block;
@@ -103,6 +101,10 @@ html{
     padding: 10px 20px;
     position: relative;
     border-block: 2px solid #b19c88c0;
+    transition: .5s;
+}
+.container ul:hover  li {
+    border: none;
 }
 .header .container ul li::after{
     content: "";
@@ -140,6 +142,10 @@ html{
     text-transform: uppercase;
     font:800 16px "Roboto Condensed" ;
     letter-spacing: 3px;
+}
+.header .container ul li a svg {
+    margin-right: 5px;
+    color: #d1d3d5;
 }
 .header .container ul li:hover a{
    color: #e49d33fb;
@@ -248,17 +254,35 @@ html{
     content: "";
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(#04332b 5%, transparent , rgba(163, 96, 8, 0.705));
+    background-image: linear-gradient(#04331988 3%, transparent , rgba(163, 96, 8, 0.705));
 }
 /* end landing */
 /* start services */
 .services{
+    position: relative;
     background-color: #dbdbdb;
-    box-shadow: 0 0px 10px 3px #0974599f inset;
+    box-shadow: 0 0px 10px 3px #013f2f9f inset;
+}
+.services .up{
+    outline: none;
+    border: 1px solid #fefefe;
+    z-index: 100;
+    font-weight: 900;
+    font-size: 25px;
+    background-color: hsl(34, 100%, 40%);
+    padding: 10px 17px;
+    border-radius: 10px;
+    color: #fff;
+    position: fixed ;
+    right: 35px;
+    bottom: 10px;
+    display:  none;
+    cursor: pointer;
+    animation: icon-ani 1.5s infinite alternate;
 }
 .sectionHeading{
     text-align: center;
-    padding: 30px 0;
+    padding: 60px 0;
     font: 900 50px/1.7 Tahoma ;
     color: #0a3761;
     letter-spacing: 2px;
@@ -406,5 +430,105 @@ html{
     width: 100%;
     height: 100%;
 }
-
 /* end services */
+/* start skills*/
+.skills{
+    background-color: #0d2e28;
+    box-shadow: 0 0 10px #cd7b11 inset;
+    .container{
+        padding-bottom: 60px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 100%;
+    }   
+        .progress{
+            color: #ffefef;
+            flex-grow: 1;
+            order: 2;
+            display: flex;
+            flex-flow: column wrap;
+            gap: 30px;
+            justify-content: space-evenly;
+            align-items: space-evenly;
+            padding-inline: 15px;
+            >div{
+                position: relative;
+                background-color: #eee;
+                border-radius: 8px;
+                padding: 20px;
+                span{
+                    letter-spacing: 2px;
+                    position: absolute;
+                    inset: -40px 0 0 10px ;
+                    padding: 15px;
+                }
+            }
+            div::after{
+                content: '';
+                position: absolute;
+                height: 88%;
+                width: 98%;
+                inset: 50% 0 0 5px  ;
+                translate: 0 -50%;
+                border-radius: inherit;
+                transition: 1s;
+                animation: progress-bar 1s linear  ;
+                animation-timeline: view() ;
+                animation-range: -20px 100px;
+            }
+            .Html::after{
+                max-width: 96%;
+                background-color: #cd3d11;
+            }
+            .Css::after{
+                max-width: 90%;
+                background-color: #12148e;
+            }
+            .Bootstrap::after{
+                max-width: 85%;
+                background-color: #6e075f;
+            }
+            .Js::after{
+                max-width: 85%;
+                background-color: #cdca11;
+            }
+            .Vue::after{
+                max-width: 60%;
+                background-color: #045c3c;
+            }
+            .Git::after{
+                max-width: 70%;
+                background-image: linear-gradient(to right,#ff9100e8 40%,#585858 55%);
+            }
+        }
+        .img{
+            flex-basis: 38%;
+            max-width: 100%;
+            display: grid;
+            place-items: center;
+            img{
+                max-width: 100%;
+                height: 85%;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 5px #fffcfc80;
+            }
+        }
+}
+@media (max-width: 570px) {
+    .skills .container{
+        flex-flow: column;
+        gap:50px;
+    }
+}
+@keyframes progress-bar {
+    from{
+        width: 1%;
+    }
+    to{
+        width: 98%;
+    }
+}
+/* End skills*/

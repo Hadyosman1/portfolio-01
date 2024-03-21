@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="header">
+    <nav id="home" class="header">
         <div class="container">
             <h1 class="logo">Elkonz</h1>
             <ul id="header_content">
-                <li><a href="#">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">contact us</a></li>
+                <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#services"><i class="fa-solid fa-laptop-file"></i>Services</a></li>
+                <li><a href="#skills"><i class="fa-brands fa-sketch"></i>Skills</a></li>
+                <li><a href="#contact"><i class="fa-regular fa-address-card"></i>contact us</a></li>
             </ul>
             <p id="toggle"><i id="bars" class="fa-solid fa-bars"></i></p>
         </div>
@@ -41,6 +41,7 @@
     <!-- end landing -->
     <!-- sart Services -->
     <div id="services" class="services">
+        <button class="up"><i class="fa-solid fa-up-long"></i></button>
             <div class="sectionHeading">
                 <h2>services</h2>
             </div>
@@ -120,6 +121,34 @@
         </div>
     </div>
     <!-- end Services -->
+    <!-- start skills -->
+    <div  id="skills" class="skills">
+        <div class="sectionHeading">
+            <h2 style="color:#cd7b11">Skills</h2>
+        </div>
+        <div class="container">
+            <div class="progress">
+                <div class="Html"><span>Html</span></div>
+                <div class="Css"><span>Css</span></div>
+                <div class="Bootstrap"><span>Bootstrap</span></div>
+                <div class="Js"><span>Js</span></div>
+                <div class="Vue"><span>Vue.Js</span></div>
+                <div class="Git"><span>Git & Github</span></div>
+            </div>
+            <div class="img">
+                <img src="images/4884785.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End skills -->
+    <!-- start contact -->  
+    <div id="contact" class="contact">
+        <div class="sectionHeading">
+            <h2>Contact US</h2>
+        </div>
+    </div>
+    <!-- start contact -->
+    
 
    <script>
     /*toggle Event*/
@@ -135,8 +164,27 @@
     }
     /*toggle Event*/
 
+    let myImgs = document.querySelectorAll("img");
+    for (let i = 0; i < myImgs.length; i++) {
+      myImgs[i].setAttribute("loading" ,"lazy");
+    }
+    // ===== Scroll to Top ==== 
 
-    // document.querySelectorAll("img").setAttribute("loading" ,"lazy");
+    let btnUp = document.querySelector('.up');
+
+    console.log(document.querySelector('.Html').style.width);
+    window.onscroll = function () {
+        if (window.scrollY < 500) {
+            btnUp.style.display = "none";
+        }else{
+            btnUp.style.display = "block";
+
+        }
+        btnUp.addEventListener('click' , (event) =>{
+        window.scrollTo({top:0, behavior:'smooth'})
+        } );
+    };
+
 
     
     
